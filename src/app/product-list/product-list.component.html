@@ -1,0 +1,16 @@
+<h2>Products</h2>
+<!--Criando diretiva *ngFor contendo os produtos-->
+<div *ngFor="let product of products">
+  <!--Usando interpolação através de {{}} acesamos os nomes de products-->
+  <h3>{{ product.name }}</h3>
+  <!--[] define o título de um elemento no caso será usado o nome + os detalhes
+  com isso os detalhes apareceram ao passar o mouse por cima do link-->
+  <a [title]="product.name + ' details'">{{ product.name }}</a>
+  <!--Usando a diretiva ngIf para exibir a descrição, caso um produto tenha-->
+  <p *ngIf="product.description">Description: {{ product.description }}></p>
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
