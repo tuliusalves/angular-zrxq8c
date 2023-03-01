@@ -8,6 +8,15 @@
   <a [title]="product.name + ' details'">{{ product.name }}</a>
   <!--Usando a diretiva ngIf para exibir a descrição, caso um produto tenha-->
   <p *ngIf="product.description">Description: {{ product.description }}></p>
+  <!-- O evento é chamando dentro de ()
+      Agora será criado um botão que chame o método share() do componente
+      product-list-->
+  <button type="button" (click)="share()">share</button>
+  <!--Fazendo product-alerts ser filho de product-list
+      Fazendo o atributo() notify receber o comportamento do
+      método "onNotify()"-->
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.

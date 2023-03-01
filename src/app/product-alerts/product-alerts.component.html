@@ -1,0 +1,11 @@
+<!-- Usando ngIf para mostrar produto se ele for maior que 700 -->
+<!--Para que o botão "Notify Me " funcione será preciso passar os dados 
+para o componente pai. Será preciso nos componentes importar também o 
+"Output e o EventEmitter".
+após criar uma propriedade com a anotação @Output instanciando 
+  EventEmitter no componente, atualize o botão notify com o clique
+contendo o nome do atributo definido no componente, seguido do método
+".emit()-->
+<p *ngIf="product && product.price > 700">
+  <button type="button" (click)="notify.emit()">Notify Me</button>
+</p>
